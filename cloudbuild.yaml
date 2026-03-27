@@ -20,7 +20,7 @@ steps:
   args: ['apply', '-f', 'k8s.yaml']
   env:
   - 'CLOUDSDK_COMPUTE_REGION=asia-south2'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-test'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
 
 #  ADD THIS
 options:
