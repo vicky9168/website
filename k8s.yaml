@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
       - name: app
-        image: asia-south2-docker.pkg.dev/my-project-new-490705/myrepo/app
+        image: asia-south2-docker.pkg.dev/my-project-new-490705/myrepo/app:latest
         ports:
         - containerPort: 3000
+        # Make sure your app listens on 0.0.0.0 inside container
 
 ---
 apiVersion: v1
@@ -24,9 +25,9 @@ kind: Service
 metadata:
   name: gcp-service
 spec:
-  type: LoadBalancer
   selector:
     app: gcp-app
+  type: LoadBalancer
   ports:
-    - port: 80
-      targetPort: 3000
+  - port: 80          # External port
+    targetPort: 3000  # Container port
