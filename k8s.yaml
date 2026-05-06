@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: asia-south2-docker.pkg.dev/my-project-new-490705/myrepo/app:latest
+        image: asia-south1-docker.pkg.dev/careful-chess-495403-e6/myrepo/app:latest
         ports:
         - containerPort: 80
         # Make sure your app listens on 0.0.0.0 inside container
